@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exemplo Vue.JS - 8</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Exemplo VueJS</h1>
+      
+      <h2>Nome: {{name}}</h2>
+      
+      <form name="add">
+        <input type="text" placeholder="Digite o seu nome" v-model="name"> 
+        <button v-on:click="add">Cadastrar</button>
+      </form>
+      
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exemplo Vue.JS - 4</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Exemplo VueJS</h1>
+      
+      <h2>{{name}}</h2>
+      <h3 v-show="status">Aluno matriculado e ativo!</h3>
+      <h3 v-show="!status">Aluno inativo!</h3>
+      <p>
+        Nota 1: {{grade1}}<br>
+        Nota 2: {{grade2}}<br>
+        Média aritmética: {{average}}<br>
+      </p>
+      
+      <p v-if="average>=9">Conceito A</p>
+      <p v-else-if="average>=8">Conceito B</p>
+      <p v-else-if="average>=6">Conceito C</p>
+      <p v-else="average>=0">Conceito D</p>
+      
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

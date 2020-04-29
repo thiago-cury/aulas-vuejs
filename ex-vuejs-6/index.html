@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exemplo Vue.JS - 6</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Exemplo VueJS</h1>
+      
+      <div style="background-color: #f98000; margin: 10px; width: 100%; height: 60px; padding: 20px;" v-for="contact in contacts" :key="contact.id">
+        <p>
+          {{contact.id}}<br>
+          {{contact.name}}<br>
+          {{contact.email}}<br>
+        </p>
+      </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

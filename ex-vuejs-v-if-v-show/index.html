@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Vue JS - v-if v-show</title>
+  </head>
+  <body>
+    <div id="app">
+
+        <h1>{{ fullName }}</h1>
+
+        <p v-show="situation">Você está matriculado!</p>
+
+        <p v-if="calculateMedia >= 9 && calculateMedia <=10">Conceito A</p>
+        <p v-else-if="calculateMedia >= 8 && calculateMedia <=8.9">Conceito B</p>
+        <p v-else-if="calculateMedia >= 6 && calculateMedia <=7.9">Conceito C</p>
+        <p v-else="calculateMedia >= 0 && calculateMedia <=5.9">Conceito D</p>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

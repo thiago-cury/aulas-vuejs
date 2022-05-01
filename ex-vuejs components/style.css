@@ -1,0 +1,10 @@
+body{
+  background-color: #f98000;
+}
+
+.colorbox{
+  background-color: #987546;
+  width: 40px;
+  height: 40px;
+  margin-top: 5px;
+}

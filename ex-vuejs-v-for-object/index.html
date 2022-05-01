@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Vue JS - v-for</title>
+  </head>
+  <body>
+    <div id="app">
+
+        <h1>{{ title }}</h1>
+
+        <div v-for="p in persons" :key="p.ID">
+          <hr>
+          <figure>
+            <img v-bind:src="p.image" v-bind:alt="p.imageDescription">
+          </figure>
+          <p>Descrição: {{ p.description }} </p>
+          <p>Cor: {{ p.color }} </p>
+          <p>XP: {{ p.xp}} </p>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

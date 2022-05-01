@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Vue JS - v-for</title>
+  </head>
+  <body>
+    <div id="app">
+
+        <h1>{{ title }}</h1>
+
+        <ul>
+          <li v-for="lang in languages">{{ lang }}</li>
+        </ul>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

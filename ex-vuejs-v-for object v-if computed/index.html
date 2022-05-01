@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Vue JS - v-for object v-if computed</title>
+  </head>
+  <body>
+    <div id="app">
+
+        <h1>{{ fullTitle }}</h1>
+
+        <div v-for="(p, index) in persons" :key="p.ID"
+             :style="{ backgroundColor: p.color }">
+          <hr>
+          <figure>
+            <img v-bind:src="p.image" v-bind:alt="p.imageDescription">
+          </figure>
+          <p>Nome: {{ p.name }} </p>
+          <p>Cor: {{ p.color }} </p>
+          <p>XP: {{ p.xp }} </p>
+
+          <p v-show="p.isPeople">É uma pessoa!</p>
+
+          <p v-if="p.xp > 100">Fucking Jedi</p>
+          <p v-if="p.jedi">Jedi</p>
+          <p v-else="p.jedi">Não é um Jedi</p>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

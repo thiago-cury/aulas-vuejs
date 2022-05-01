@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Vue JS 1</title>
+  </head>
+  <body>
+    <div class="nav-bar">
+    </div>
+    <div id="app">
+      <div class="cart">
+        <p>Cart({{cart}})</p>
+        <p>Quantity: Cart({{cart.length}})</p>
+      </div>
+      <product :premium="premium" @add-to-cart="updateCart"></product>
+      <product-tabs :reviews="reviews"></product-tabs>
+      <!-- <product></product>
+      <product></product> -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

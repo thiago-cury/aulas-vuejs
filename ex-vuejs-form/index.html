@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Vue JS - el - basic</title>
+  </head>
+  <body>
+    <div id="app">
+
+        <h1>{{ title }} {{ subtitle }}</h1>
+
+        <form class="review-form" @submit.prevent="onSubmit">
+
+          <div v-if="errors.length">Quantidade de erros: {{ errors.length }}</div>
+
+          <div v-if="errors.length">
+                <b>Por favor arrume os seguinte(s) erro(s):</b>
+                <ul>
+                  <li v-for="error in errors">{{ error }}</li>
+                </ul>
+          </div>
+          <div>
+            <label for="name">Name:</label>
+            <input id="name" v-model="name" placeholder="name">
+          </div>
+
+          <div>
+            <label for="review">Review:</label>
+            <textarea id="review" v-model="review"></textarea>
+          </div>
+
+          <div>
+            <label for="rating">Rating:</label>
+            <select id="rating" v-model.number="rating">
+              <option>5</option>
+              <option>4</option>
+              <option>3</option>
+              <option>2</option>
+              <option>1</option>
+            </select>
+          </div>
+
+          <div>
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+
+        <div v-if="reviews.length">Quantidade de reviews: {{ reviews.length }}</div>
+
+        <div v-if="reviews.length">
+              <b>Review(s):</b>
+              <ul>
+                <li v-for="review in reviews">{{ review }}</li>
+              </ul>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
